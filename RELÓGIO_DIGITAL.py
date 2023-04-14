@@ -1,29 +1,3 @@
-"""
-operator = input('Digite a operação desejada:(+, -, *, /, %, //)')
-n1 = (input('Digite o primeiro número:'))
-n2 = (input('Digite o segundo número:'))
-n3 = (input('Digite o terceiro número:'))
-n4 = (input('Digite o quarto número:'))
-
-if operator == '+':
-    operator = int(n1) + int(n2) + int(n3) + int(n4)
-elif operator == '-':
-    operator = int(n1) - int(n2) - int(n3) - int(n4)
-elif operator == '*':
-    operator = int(n1) * int(n2) * int(n3) * int(n4)
-elif operator == '/':
-    operator = int(n1) / int(n2) / int(n3) / int(n4)
-elif operator == '//':
-    operator = int(n1) // int(n2) // int(n3) // int(n4)
-elif operator == '%':
-    operator = int(n1) % int(n2) % int(n3) % int(n4)
-else:
-    operator = 'Operação não suportada ! '
-
-print('O resultado da operação é: ' + str(operator))
-
-"""
-
 # Relógio Digital - front-end
 
 from tkinter import*
