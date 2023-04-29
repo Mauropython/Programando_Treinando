@@ -285,7 +285,7 @@ b = (450 + 850 == 500 - 800) or (500 * 5 > 400 * 7)
 print(v, a, s, b)
 
 """
-
+import tkinter
 
 """
 operator = input('Digite a operação desejada:(+, -, *, /, %, //)')
@@ -469,6 +469,8 @@ nome, sobrenome = 'Luan', 'Viado'
 print(nome, sobrenome)
 
 """
+
+"""
 x = 9
 texto = 'sim' if x == 10 else 'não'
 print(texto)
@@ -477,3 +479,143 @@ num1 = int(input('Digite um número:'))
 s = 'par' if num1 % 2 == 0 else 'ímpar' # % resto da divisão
 print('O número digitado é',s)
 
+"""
+
+"""
+x = 1
+print('while')
+while (x<=10):
+    print(x)
+    x =x+1
+else:
+    print('else')
+print('fim')
+
+"""
+import tkinter as tk
+from tkinter.ttk import *
+from tkinter import *
+from tkinter.messagebox import showinfo
+from calendar import month_name
+from PIL import Image
+from PIL import Image, ImageTk
+from PIL import ImageTk, Image
+import tensorflow as tf
+from tkinter import simpledialog, Tk
+
+janela = tk.Tk() # Criação de janela
+janela.title('Software') # Título da janela
+janela.geometry('1000x1000') # Geometria
+janela.configure()
+janela.update_idletasks()
+
+
+
+image =Image.open("C:/Users/Izalu/Downloads/icone.png")
+img = ImageTk.PhotoImage(image)
+label = tk.Label(janela, image=img)
+label.pack(pady=0, side="left", anchor='center')
+
+
+# Redimensiona a imagem para a nova largura e altura desejadas
+nova_largura = 200
+nova_altura = 200
+imagem_redimensionada = image.resize((nova_largura, nova_altura))
+
+
+# Salva a imagem redimensionada em um novo arquivo
+imagem_redimensionada.save("C:/Users/Izalu/Downloads/icone.png")
+
+
+fonte = ('Helvetica', 10, 'bold')
+
+cor1 = '#000000' # black
+cor2 = '#feffff' # white
+cor3 = '#0074eb' #blue
+cor4 = 'red'
+cor5 = '#000080'
+cor6 = 	'#00008B' #darkblue
+cor7 = '#696969'
+cor8 = '#D8BFD8'
+
+
+janela.configure(background=cor2, ) # Definições da janela front-End
+
+
+# Criando um Checkbutton
+
+selecao = tk.BooleanVar()
+caixa_selecao = tk.Checkbutton(janela, text='Aceito os termos', variable=selecao, background='white', relief='sunken', bd=4)
+caixa_selecao.pack(side='bottom', pady=10, padx=0)
+
+#caixa_selecao.grid(row=3, column=1, pady=10, sticky='s')
+
+
+# Criando um botão hambúrguer
+botao_hamburguer = tk.Button(janela, text='\u2630', width=3, height=1, font=('Arial', 12), background='yellow', anchor='center')
+botao_hamburguer.pack(side="right", anchor="nw", padx=0, pady=0)
+
+
+# Exibindo o Checkbutton
+caixa_selecao.pack()
+
+
+def funcao_botao0():
+    print("Você clicou no botão 1!")
+
+def funcao_botao1():
+    print("Você clicou no botão 2!")
+
+def funcao_botao2():
+    print("Você clicou no botão 3!")
+
+def funcao_botao3():
+    print("Você clicou no botão 4!")
+
+
+
+
+
+
+
+
+botao0 = tk.Button(janela, text="LOGIN", bg='White', command=funcao_botao0, width=10, height=1, font=fonte, bd=10, highlightthickness=2,
+highlightbackground='yellow', fg='red')
+botao0.pack(pady=5, side="left", anchor='center')
+
+
+botao1 = tk.Button(janela, text="CADASTRAR", bg='White', command=funcao_botao1, width=10, height=1, font=fonte, bd=10, highlightthickness=2,
+highlightbackground='yellow', fg='red')
+botao1.pack(pady=5, side="left", anchor='center')
+#botao1.grid(row=1, column=0)
+
+
+botao2 = tk.Button(janela, text="REGISTRAR", bg='White', command=funcao_botao2, width=10, height=1, font=fonte, bd=10, highlightthickness=2,
+highlightbackground='yellow', fg='red')
+botao2.pack(pady=5, side="left", anchor='center')
+#botao2.grid(row=2, column=0)
+
+
+botao3 = tk.Button(janela, text="SENHA", bg='White', command=funcao_botao3, width=10, height=1, font=fonte, bd=10, highlightthickness=2,
+highlightbackground='yellow', fg='red')
+botao3.pack(pady=5, side="left", anchor='center')
+#botao3.grid(row=3, column=0)
+
+
+x = (botao0.winfo_width() - botao1.winfo_width() - botao2.winfo_width() - botao3.winfo_width()) / 2
+y = 10
+
+botao0.place(x=x, y=y)
+botao1.place(x=x+botao1.winfo_width(), y=y)
+botao2.place(x=x+botao1.winfo_width()+botao2.winfo_width(), y=y)
+botao3.place(x=x+botao1.winfo_width()+botao2.winfo_width()+botao3.winfo_width(), y=y)
+
+
+
+botao0.pack()
+botao1.pack()
+botao2.pack()
+botao3.pack()
+
+
+janela.mainloop()
